@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h3>Upcoming Events</h3>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let event of events">
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ event.title }}</h5>
+          <p class="card-text">
+            <strong>Date:</strong> {{ event.date}}
+          </p>
+          <button class="btn btn-outline-primary" (click)="book(event.id)">
+            Book
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

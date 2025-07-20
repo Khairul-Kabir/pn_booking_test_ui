@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h3>My Bookings</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Event</th>
+          <th>Booked Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ booking.eventTitle }}</td>
+          <td>{{ booking.bookedAt}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
